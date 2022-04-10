@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
+
+Artisan::command('hello:closure', function () {
+    $this->comment('Hello closure command');
+    return 0;
+})->describe('サンプルコマンド（クロージャ）');
