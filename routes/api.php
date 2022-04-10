@@ -30,3 +30,10 @@ Route::get('/with_args', function () {
     ]);
     // Artisan::call('with-args-command Johann --switch');
 });
+
+Route::post('/import-orders', function (Request $request) {
+    $json = $request->getContent();
+    file_put_contents('/tmp/orders', $json);
+
+    return response('ok');
+});

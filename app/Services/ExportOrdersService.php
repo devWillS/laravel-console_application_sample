@@ -33,6 +33,7 @@ final class ExportOrdersService
                 [
                     'orders.order_code',
                     'orders.order_date',
+                    'orders.total_quantity',
                     'orders.total_price',
                     'orders.customer_name',
                     'orders.customer_email',
